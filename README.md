@@ -19,4 +19,5 @@ git submodule update --remote
 ```
 git submodule deinit -f themes/ui-shortcodes
 git rm -r --cached themes/ui-shortcodes
+rm -r .git/modules/themes/ui-shortcodes
 ```
