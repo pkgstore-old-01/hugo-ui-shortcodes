@@ -1,6 +1,6 @@
 {{ $images := ((split (.Get 0) "|") | default "") }}
 {{ $size := ((.Get 1) | default "50vh") }}
-{{ $id := (printf "carousel-%s" (delimit (shuffle (seq 1 32)) "" | md5)) }}
+{{ $id := (printf "carousel-%s" (delimit (shuffle (seq 999)) "" | md5)) }}
 
 
 <div class="shortcode shortcode-{{ .Name }} mb-3">

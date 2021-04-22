@@ -1,6 +1,6 @@
 {{ $title := ((.Get "title") | default "Spoiler") }}
 {{ $type := ((.Get "type") | default "primary") }}
-{{ $id := (delimit (shuffle (seq 1 32)) "" | md5) }}
+{{ $id := (delimit (shuffle (seq 999)) "" | md5) }}
 
 <div class="shortcode shortcode-{{ .Name }}">
   <p>

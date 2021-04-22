@@ -7,7 +7,7 @@
 {{ $phone := (.Get "phone") | default "" }}
 {{ $message := (.Get "message") | default "" }}
 
-{{ $id := (delimit (shuffle (seq 1 32)) "" | md5) }}
+{{ $id := (delimit (shuffle (seq 999)) "" | md5) }}
 
 <div class="shortcode shortcode-form shortcode-{{ .Name }}">
   <form id="form-{{ $id }}" class="ext-google-form" data-google-form="{{ $form }}">

@@ -8,7 +8,7 @@
 {{ $mLon := ((.Get "mLon") | default "") }}
 {{ $mTxt := ((.Get "mTxt") | default "") }}
 
-{{ $id := (delimit (shuffle (seq 1 32)) "" | md5) }}
+{{ $id := (delimit (shuffle (seq 999)) "" | md5) }}
 {{ $fn := ((printf "sc_leaflet_%s" $id) | safeJS) }}
 
 <div class="shortcode shortcode-{{ .Name }} mb-3">

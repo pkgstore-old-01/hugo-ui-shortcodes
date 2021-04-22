@@ -11,7 +11,7 @@
 
     {{ range $user.response }}
     {{ $profile := (printf "https://vk.com/id%d" (.id | int)) }}
-    {{ $id := (delimit (shuffle (seq 1 32)) "" | md5) }}
+    {{ $id := (delimit (shuffle (seq 999)) "" | md5) }}
     <div class="col">
       <div class="card">
         <div class="row g-0">
