@@ -210,8 +210,8 @@
                 <input class="form-control" type="text" value="{{ $btc }}" data-ext-fn="ext-select-all" readonly/>
                 <span class="input-group-text">{{ i18n "form.donate.btc" }}</span>
               </div>
-              <div class="text-center">
-                <canvas class="border rounded" data-ext-fn="ext-qrcode" data-ext-text="{{ $btc }}"></canvas>
+              <div class="d-flex justify-content-center">
+                <div data-ext-fn="ext-qrcode" data-ext-text="{{ $btc }}"></div>
               </div>
             </div>
             {{ end }}
@@ -222,8 +222,8 @@
                 <input class="form-control" type="text" value="{{ $eth }}" data-ext-fn="ext-select-all" readonly/>
                 <span class="input-group-text">{{ i18n "form.donate.eth" }}</span>
               </div>
-              <div class="text-center">
-                <canvas class="border rounded" data-ext-fn="ext-qrcode" data-ext-text="{{ $eth }}"></canvas>
+              <div class="d-flex justify-content-center">
+                <div data-ext-fn="ext-qrcode" data-ext-text="{{ $eth }}"></div>
               </div>
             </div>
             {{ end }}
@@ -234,8 +234,8 @@
                 <input class="form-control" type="text" value="{{ $xmr }}" data-ext-fn="ext-select-all" readonly/>
                 <span class="input-group-text">{{ i18n "form.donate.xmr" }}</span>
               </div>
-              <div class="text-center">
-                <canvas class="border rounded" data-ext-fn="ext-qrcode" data-ext-text="{{ $xmr }}"></canvas>
+              <div class="d-flex justify-content-center">
+                <div data-ext-fn="ext-qrcode" data-ext-text="{{ $xmr }}"></div>
               </div>
             </div>
             {{ end }}
