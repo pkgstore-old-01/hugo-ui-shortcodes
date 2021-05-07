@@ -1,6 +1,6 @@
 {{ $images := ((split (.Get 0) "|") | default "") }}
 {{ $size := ((.Get 1) | default "50vh") }}
-{{ $id := (printf "carousel-%s" (delimit (shuffle (seq 999)) "" | md5)) }}
+{{ $id := (printf "sc-carousel-%s" (delimit (shuffle (seq 999)) "" | md5)) }}
 
 
 <div class="shortcode shortcode-{{ .Name }} mb-3">
@@ -15,7 +15,7 @@
         <div class="carousel-inner rounded">
           {{ range $key, $value := $images }}
           <div class='carousel-item {{ if eq $key 0 }}active{{ end }}' style="height: {{ $size }};">
-            <img class="d-block w-100" style="min-height: {{ $size }}; object-fit: cover;" src="{{ $value }}" alt="Image"/>
+            <img class="d-block w-100 h-100" style="object-fit: contain;" src="{{ $value }}" alt="Image"/>
           </div>
           {{ end }}
         </div>

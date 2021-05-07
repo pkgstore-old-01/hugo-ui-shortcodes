@@ -2,7 +2,7 @@
 {{ $gist := ((.Get 1) | default "") }}
 {{ $file := "" }}
 
-{{if ((len .Params) | eq 3) }}
+{{ if ((len .Params) | eq 3) }}
 {{ $file = ((printf "?file=%s" (.Get 2)) | default "") }}
-{{end}}
+{{ end }}
 <script src="https://gist.github.com/{{ $user }}/{{ $gist }}.js{{ $file }}"></script>

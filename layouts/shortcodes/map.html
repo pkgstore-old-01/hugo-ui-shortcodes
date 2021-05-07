@@ -12,7 +12,7 @@
 {{ $fn := ((printf "sc_diagram_%s" $id) | safeJS) }}
 
 <div class="shortcode shortcode-{{ .Name }} mb-3">
-  <div id="map-{{ $id }}" class="rounded ratio ratio-16x9 ext-map"
+  <div id="sc-map-{{ $id }}" class="rounded ratio ratio-16x9 ext-map"
        data-map-lat="{{ $lat }}"
        data-map-lon="{{ $lon }}"
        data-map-zoom="{{ $zoom }}"
@@ -27,7 +27,7 @@
 <script>
   function {{ $fn }}() {
     let $map, $marker;
-    const $el = document.getElementById('map-' + '{{ $id }}');
+    const $el = document.getElementById('sc-map-' + '{{ $id }}');
     const $data = $el.dataset;
 
     $map = L.map($el, {

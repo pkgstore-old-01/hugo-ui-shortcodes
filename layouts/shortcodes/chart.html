@@ -5,12 +5,12 @@
 {{ $fn := ((printf "sc_chart_%s" $id) | safeJS) }}
 
 <div class="shortcode shortcode-{{ .Name }} mb-3">
-  <canvas id="chart-{{ $id }}"></canvas>
+  <canvas id="sc-chart-{{ $id }}"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.min.js" onload="{{ $fn }}();" crossorigin="anonymous" async></script>
 <script>
   function {{ $fn }}() {
-    const $el = document.getElementById('chart-{{ $id }}');
+    const $el = document.getElementById('sc-chart-{{ $id }}');
     const $ctx = $el.getContext('2d');
     const $options = {{ ($r | safeJS) }};
     $el.setAttribute('style', 'width: {{ $width }}%; height: {{ $height }}px; margin: 0 auto;');

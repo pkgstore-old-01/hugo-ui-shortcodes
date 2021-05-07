@@ -2,7 +2,7 @@
 {{ $fn := ((printf "sc_diagram_%s" $id) | safeJS) }}
 
 <div class="shortcode shortcode-{{ .Name }} mb-3">
-  <div id="diagram-{{ $id }}" class="mermaid overflow-auto ext-diagram">{{- safeHTML .Inner -}}</div>
+  <div id="sc-diagram-{{ $id }}" class="mermaid overflow-auto ext-diagram">{{- safeHTML .Inner -}}</div>
   <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js" onload="{{ $fn }}();" crossorigin="anonymous" async></script>
   <script>
     function {{ $fn }}() {
