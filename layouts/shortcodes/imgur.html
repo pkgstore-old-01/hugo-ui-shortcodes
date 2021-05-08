@@ -15,7 +15,7 @@
 
 <div class="shortcode shortcode-{{ .Name }} {{ $align }} {{ $space }}">
   <figure class="figure">
-    <a href="https://i.imgur.com/{{ $file }}" rel="noopener nofollow" data-sub-html="{{ $caption }}" data-ext-fn="ext-gallery-item">
+    <a class="spotlight" href="https://i.imgur.com/{{ $file }}" rel="noopener nofollow" data-sub-html="{{ $caption }}" data-ext-fn="ext-gallery-item">
       <img class="figure-img img-thumbnail" src="https://i.imgur.com/{{ $img }}" alt="{{ $img }}" loading="lazy"/>
     </a>
     {{ with $caption }}
