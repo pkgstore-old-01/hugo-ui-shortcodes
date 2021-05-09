@@ -8,11 +8,13 @@
     </blockquote>
     {{ with $author }}
     <figcaption class="blockquote-footer">
-      {{ with $url }}
-      <cite><a href="{{ $url }}" target="_blank" rel="noopener nofollow">{{ $author | $.Page.RenderString }}</a></cite>
-      {{ else }}
-      <cite>{{ $author | $.Page.RenderString }}</cite>
-      {{ end }}
+      <cite>
+        {{ with $url }}
+        <a href="{{ $url }}" target="_blank" rel="noopener nofollow">{{ $author | $.Page.RenderString }}</a>
+        {{ else }}
+        {{ $author | $.Page.RenderString }}
+        {{ end }}
+      </cite>
     </figcaption>
     {{ end }}
   </figure>
