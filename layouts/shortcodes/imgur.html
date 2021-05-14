@@ -23,11 +23,11 @@
       </picture>
     </a>
     {{ with $caption }}
-    <figcaption class="figure-caption">{{ $caption }}</figcaption>
+    <figcaption class="figure-caption">{{ . }}</figcaption>
     {{ end }}
   </figure>
 
-  {{ partial "module/modal/image" (dict "context" . "id" $id "title" $img "src" (printf "https://i.imgur.com/%s" $file) "alt" $img) }}
+  {{ partial "module/modal/image" (dict "context" . "id" $id "title" $img "src" (printf "https://i.imgur.com/%s" $file) "alt" $img "caption" $caption) }}
 </div>
 
 {{ else }}
