@@ -13,11 +13,9 @@
 {{ if (eq $align "float-end") }}{{ $space = "ms-3" }}{{ end }}
 {{ if (eq $align "float-center") }}{{ $align = "text-center" }}{{ end }}
 
-{{ $id := (delimit (shuffle (seq 999)) "" | md5) }}
-
 <div class="shortcode shortcode-{{ .Name }} {{ $align }} {{ $space }}">
   <figure class="figure">
-    <a class="d-inline-block" href="https://i.imgur.com/{{ $file }}" rel="noopener nofollow" data-bs-toggle="modal" data-bs-target="#modal-{{ $id }}">
+    <a class="d-inline-block spotlight" href="https://i.imgur.com/{{ $file }}" rel="noopener nofollow" data-description="{{ $caption }}">
       <picture>
         <img class="figure-img img-thumbnail" src="https://i.imgur.com/{{ $img }}" alt="{{ $img }}" loading="lazy"/>
       </picture>
@@ -26,8 +24,6 @@
     <figcaption class="figure-caption">{{ . }}</figcaption>
     {{ end }}
   </figure>
-
-  {{ partial "module/modal/image" (dict "context" . "id" $id "title" $img "src" (printf "https://i.imgur.com/%s" $file) "alt" $img "caption" $caption) }}
 </div>
 
 {{ else }}
