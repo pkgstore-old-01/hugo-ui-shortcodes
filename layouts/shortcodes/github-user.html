@@ -1,4 +1,4 @@
-{{ $token := $.Site.Params.api.github.token | base64Decode }}
+{{ $token := ($.Site.Params.api.github.token | base64Decode) }}
 {{ $url := "https://api.github.com" }}
 {{ $users := (split (.Get 0) "|") }}
 
