@@ -5,7 +5,7 @@ Base shortcodes for Hugo.
 ## Install
 
 ```
-git submodule add https://github.com/marketplace-hugo/hugo-ui-shortcodes.git themes/ui-shortcodes
+git submodule add https://github.com/pkgstore/hugo-ui-shortcodes.git themes/ui-shortcodes
 ```
 
 ## Update
